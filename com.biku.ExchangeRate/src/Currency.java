@@ -59,24 +59,24 @@ public class Currency {
             return false;
         }
         Currency other = (Currency) obj;
-        if(code == null) {
+        if (code == null) {
             if (other.code != null) {
                 return false;
-            }else if (!code.equals(other.code)) {
+            } else if (!code.equals(other.code)) {
                 return false;
             }
 
-            if(name == null) {
+            if (name == null) {
                 if (other.name != null) {
                     return false;
-                }else if (!name.equals(other.name)) {
+                } else if (!name.equals(other.name)) {
                     return false;
                 }
             }
-            if(course == null) {
-                if(other.course != null) {
+            if (course == null) {
+                if (other.course != null) {
                     return false;
-                }else if (!course.equals(other.course)) {
+                } else if (!course.equals(other.course)) {
                     return false;
                 }
             }

@@ -19,7 +19,8 @@ import java.time.LocalDate;
 public class NBPExchange {
     private static final String ADRES = "http://api.nbp.pl/api/exchangerates/tables/";
 
-    /** Pobiera tabelę z bieżącymi kursami walut.
+    /**
+     * Pobiera tabelę z bieżącymi kursami walut.
      * Zwraca null w przypadku błędów.
      */
     public static Table downloadActualyCoures() {
@@ -27,7 +28,8 @@ public class NBPExchange {
         return xmlTable(doc);
     }
 
-    /** Pobiera tabelę z archiwalnymi kursami walut z określonej daty.
+    /**
+     * Pobiera tabelę z archiwalnymi kursami walut z określonej daty.
      * Zwraca null w przypadku błędów, np. wtedy, gdy dla danej daty nie istnieje tabela.
      */
     public static Table historyCourses(String data) {
