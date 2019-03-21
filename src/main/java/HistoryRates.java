@@ -2,9 +2,7 @@ import javax.swing.*;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -54,30 +52,31 @@ public class HistoryRates {
                 for (Currency currency : table.getAllCurrency()) {
                     currencyList.add(currency.toString());
                 }
-
-
                 /**
                  * TODO: Wczytuje tylko ostatnią datę (tak przekazane z "RateCreator"
                  * TODO: potrzebna jakaś metoda zbierająca dane
                  *
                  * RateCreator.writteDate(date.toString());
-                 *
                  */
-                /**
-                 * TODO: Poprawić iteracje, wskazuje na następny element po elemencie "contains(chooseCurrency)"
-                 */
+//  Iterators method to separate selected currency from currencyList
                 Iterator<String> iterator = currencyList.iterator();
-
                 while (iterator.hasNext()) {
-                    if (iterator.next().contains(chooseCurrency) && iterator.hasNext()) {
-                        selectedCurrency.add(iterator.next());
+                    String  myiterator = iterator.next();
+                    if (myiterator.contains(chooseCurrency)) {
+                        selectedCurrency.add(myiterator);
                     }
                 }
             }
 
 
-        return currencyList;
+//        return currencyList;
+            return selectedCurrency;
     }
+
+    public static void rateOperation() {
+
+    }
+
 
 
     public static List<LocalDate> dateBetween(LocalDate startDate, LocalDate endDate) {
