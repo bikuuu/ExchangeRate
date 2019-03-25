@@ -2,9 +2,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Currency {
-    public final String name;
-    public final String code;
-    public final BigDecimal rate;
+    private final String name;
+    private final String code;
+    private final BigDecimal rate;
 
     public Currency(String code, String name, BigDecimal rate) {
         this.code = code;
