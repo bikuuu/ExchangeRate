@@ -4,6 +4,7 @@
       <mapping pattern="*.js.flow" type="Flow" />
       <mapping pattern="*.js.flow" type="Flow" />
       <mapping pattern="_DS_Store" type="PLAIN_TEXT" />
+      <mapping pattern="_DS_Store(1)" type="Scala" />
     </extensionMap>
   </component>
 </application>
